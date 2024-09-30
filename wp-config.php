@@ -23,11 +23,12 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-// Load composer autoloader
-require_once __DIR__ . '/vendor/autoload.php';
 
-// Determin if the environment is local or production
-if (file_exists(__DIR__ . '../.env')) {
+// Load Composer autoloader
+require_once __DIR__ . '/vendor/autoload.php'; // Adjust this path if necessary
+
+// Determine if the environment is local or production
+if (file_exists(__DIR__ . '/../.env')) {
 	// Production environment (load .env from one directory up)
 	$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 } else {
@@ -115,7 +116,7 @@ if (! defined('WP_DEBUG')) {
 	define('WP_DEBUG', false);
 }
 
-define('WP_ENVIRONMENT_TYPE', 'local');
+// define('WP_ENVIRONMENT_TYPE', 'local');
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
