@@ -25,7 +25,7 @@
 
 
 // Load Composer autoloader
-require_once __DIR__ . '/vendor/autoload.php'; // Adjust this path if necessary
+require_once __DIR__ . '/../vendor/autoload.php'; // Adjust this path if necessary
 
 // Determine if the environment is local or production
 if (file_exists(__DIR__ . '/../.env')) {
